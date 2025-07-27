@@ -1,111 +1,49 @@
-<h1 align="center">💬 API REST - Gestión de Tópicos y Respuestas</h1>
+# API REST - Gestión de Tópicos y Respuestas
 
-<p align="center">
-  Una poderosa API REST construida con Spring Boot para gestionar tópicos, respuestas, y autenticación segura.
-</p>
+Una API REST construida con Spring Boot para gestionar tópicos, respuestas y autenticación segura.
 
-<p align="center">
-  <img src="https://img.shields.io/badge/Spring_Boot-3.x-success" />
-  <img src="https://img.shields.io/badge/MySQL-Relational_DB-blue" />
-  <img src="https://img.shields.io/badge/Security-Autenticaci%C3%B3n-green" />
-  <img src="https://img.shields.io/badge/Migraciones-Flyway-red" />
-</p>
+## Descripción
 
-## 📌 Descripción
-
-**Foro-Hub** es una API RESTful construida con **Spring Boot** que permite gestionar tópicos y respuestas dentro de un foro. Incorpora autenticación segura mediante **JWT**, validaciones de negocio, persistencia en **MySQL** y migraciones automáticas con **Flyway**.
+Foro-Hub es una API RESTful que permite crear y administrar tópicos y respuestas en un foro. Incluye autenticación con JWT, validaciones, persistencia en MySQL y migraciones con Flyway.
 
 ---
 
-## 📌 Funcionalidades principales
+## Funcionalidades
 
-✅ **Gestión de Tópicos**
-- Crear un nuevo tópico
-- Listar todos los tópicos
-- Ver un tópico específico
-- Actualizar un tópico
-- Eliminar un tópico
-
-✅ **Gestión de Respuestas**
-- Crear una respuesta: `@PostMapping /respuestas`
-- Listar respuestas: `@GetMapping /respuestas`
-- Eliminar respuesta: `@DeleteMapping /respuestas/{id}`
-
-✅ **Otras características destacadas**
-- API RESTful con rutas limpias y semánticas
-- Validaciones de datos según reglas de negocio
-- Persistencia con **MySQL** y migraciones gestionadas por **Flyway**
-- Seguridad y control de acceso con **Spring Boot Security**
-
-✅ **Seguridad con JWT**
-- Registro y autenticación de usuarios
-- Acceso restringido a rutas privadas
-
-✅ **Persistencia**
-- Base de datos relacional (MySQL)
-- Migraciones automáticas con Flyway
-
-✅ **Buenas prácticas**
-- Rutas RESTful limpias
-- Validaciones de entrada
-- Separación de capas: Controller, Service, Repository
----
-
-## 🛠️ Tecnologías utilizadas
-
-| Tecnología       | Descripción                         |
-|------------------|-------------------------------------|
-| Java 17+         | Lenguaje base                       |
-| Spring Boot      | Framework principal                 |
-| Spring Security  | Autenticación y autorización        |
-| Flyway           | Migraciones automáticas de DB       |
-| MySQL            | Base de datos relacional            |
-| JPA / Hibernate  | ORM para persistencia de datos      |
-| HATEOAS (opcional)| Navegación entre recursos (HAL)    |
+- Gestión de tópicos: crear, listar, ver, actualizar y eliminar.
+- Gestión de respuestas: crear, listar y eliminar.
+- Autenticación y autorización con JWT.
+- Persistencia en MySQL con migraciones automáticas.
+- Validaciones de datos y separación por capas.
 
 ---
 
-## 🔐 Seguridad
+## Tecnologías
 
-- Autenticación y autorización implementadas con **Spring Security**
-- Protección de endpoints sensibles
-- Rutas públicas y privadas bien definidas
-  
----
-
-## 📦 Endpoints REST
-
-### 🧵 Tópicos (`/topicos`)
-
-| Método | Ruta                  | Descripción               |
-|--------|------------------------|---------------------------|
-| POST   | `/topicos`             | Crear nuevo tópico        |
-| GET    | `/topicos`             | Listar todos los tópicos  |
-| GET    | `/topicos/{id}`        | Obtener un tópico por ID  |
-| PUT    | `/topicos/{id}`        | Actualizar un tópico      |
-| DELETE | `/topicos/{id}`        | Eliminar un tópico        |
-
-### 💬 Respuestas (`/respuestas`)
-
-| Método | Ruta                  | Descripción                  |
-|--------|------------------------|------------------------------|
-| POST   | `/respuestas`          | Crear una nueva respuesta    |
-| GET    | `/respuestas`          | Listar respuestas paginadas |
-| DELETE | `/respuestas/{id}`     | Eliminar una respuesta       |
-
----
-## 🧠 Estructura del Proyecto
-<pre lang="markdown"><code> ``` src/ ├── controller/ → Controladores REST ├── dto/ → Clases de transferencia de datos ├── model/ → Entidades de base de datos ├── repository/ → Interfaces JPA ├── service/ → Lógica de negocio ├── config/ → Configuración de seguridad JWT ├── security/ → Filtros, utils y autenticación └── db/migration/ → Scripts de Flyway (ej: V1__init.sql) ``` </code></pre>
+- Java 17+
+- Spring Boot
+- Spring Security
+- Flyway
+- MySQL
+- JPA / Hibernate
 
 ---
 
-👨‍💻 Autor: 
-Brian Exequiel Maciel
+## Endpoints principales
 
+### Tópicos (`/topicos`)
+
+- `POST /topicos` → Crear nuevo tópico  
+- `GET /topicos` → Listar todos los tópicos  
+- `GET /topicos/{id}` → Obtener un tópico por ID  
+- `PUT /topicos/{id}` → Actualizar un tópico  
+- `DELETE /topicos/{id}` → Eliminar un tópico  
+
+### Respuestas (`/respuestas`)
+
+- `POST /respuestas` → Crear nueva respuesta  
+- `GET /respuestas` → Listar respuestas  
+- `DELETE /respuestas/{id}` → Eliminar respuesta  
 
 ---
-
-📄 Licencia
-Este proyecto está licenciado bajo la licencia MIT.
-Consulta el archivo LICENSE para más detalles.
 
